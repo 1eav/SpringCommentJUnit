@@ -1,0 +1,22 @@
+server:
+  port: 8081
+logging:
+  level:
+    org.example.springexample: debug
+comment:
+  length:
+    max: 300
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: 1eavpostgre
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
+    enabled: true
+    drop-first: false
